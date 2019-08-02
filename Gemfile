@@ -19,6 +19,7 @@ gem 'devise'
 
 gem 'haml-rails', '~> 2.0'
 gem 'simple_form'
+gem 'normalize-rails'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'

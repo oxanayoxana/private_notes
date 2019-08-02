@@ -21,6 +21,8 @@ gem 'haml-rails', '~> 2.0'
 gem 'simple_form'
 gem 'normalize-rails'
 
+gem 'rails_admin', '~> 2.0.0.beta'
+
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks

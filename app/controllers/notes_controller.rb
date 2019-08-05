@@ -1,13 +1,14 @@
+# frozen_string_literal: true
+
 class NotesController < ApplicationController
-  before_action :find_note, only: [:show, :edit, :update, :destroy]
+  before_action :find_note, only: %i[show edit update destroy]
   before_action :authenticate_user!
 
   def index
     @notes = current_user.notes
   end
 
-  def show
-  end
+  def show; end
 
   def new
     @note = current_user.notes.build
@@ -23,8 +24,7 @@ class NotesController < ApplicationController
     end
   end
 
-  def edit
-  end
+  def edit; end
 
   def update
     if @note.update(note_params)
@@ -35,9 +35,7 @@ class NotesController < ApplicationController
   end
 
   def destroy
-    if @note.destroy
-      redirect_to notes_path
-    end
+    redirect_to notes_path if @note.destroy
   end
 
   private
@@ -49,5 +47,4 @@ class NotesController < ApplicationController
   def note_params
     params.require(:note).permit(:title, :content)
   end
-    
 end
